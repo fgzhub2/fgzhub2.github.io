@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verifikasi Jawaban</title>
+  </head>
+  <body>
+    <h1>Selamat datang di Kuis Sederhana!</h1>
+    <p>Pertanyaan: Siapa pencipta Website ini</p>
+    <input type="text" id="jawabanInput" placeholder="Masukkan Jawaban Anda" />
+    <button id="cekJawabanButton">Cek Jawaban</button>
+    <p id="pesanHasil"></p>
+
+    <script>
+      // Mendapatkan elemen-elemen yang diperlukan
+      const jawabanInput = document.getElementById("jawabanInput");
+      const cekJawabanButton = document.getElementById("cekJawabanButton");
+      const pesanHasil = document.getElementById("pesanHasil");
+
+      // Menyediakan jawaban yang benar
+      const jawabanBenar = "afgan";
+
+      // Menambahkan event listener untuk tombol cek jawaban
+      cekJawabanButton.addEventListener("click", function () {
+        const jawabanPengguna = jawabanInput.value;
+
+        if (jawabanPengguna === jawabanBenar) {
+          pesanHasil.textContent = "Jawaban Anda benar!";
+        } else {
+          pesanHasil.textContent = "Jawaban Anda salah. Coba lagi.";
+        }
+      });
+    </script>
+  </body>
+</html>
